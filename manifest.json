@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Umify",
+  "short_name": "Umify",
+  "description": "Adds \"like\", \"um\", \"y'know\", and similar words randomly to websites.",
+  "version": "0.2.3",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_popup": "options.html",
+    "name": "Umify"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["replace.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "icons": {
+    "128": "icon.png"
+  }
+}
